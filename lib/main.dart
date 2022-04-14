@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: context.supportedLocales,
         locale: context.locale,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Demoo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
