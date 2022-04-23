@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/AppBar.dart';
@@ -28,7 +29,7 @@ loginWidth=300;  }
           child: ListView(
             children: [
               AppBarr(
-                text: "Profile",
+                text: "Profile".tr(),
               ),
               SizedBox(
                 height: 30,
@@ -73,7 +74,7 @@ duration: Duration(seconds: 5),
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Text(
-                              "Edit",
+                              "Edit".tr(),
                               style: TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold,
@@ -108,7 +109,7 @@ duration: Duration(seconds: 5),
                             width: 15,
                           ),
                           Text(
-                            "kamal Magdy kamal",
+                            "kamal Magdy kamal".tr(),
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ],
@@ -227,7 +228,7 @@ duration: Duration(seconds: 5),
                                 width: 15,
                               ),
                               Text(
-                                "Last Ticket",
+                                "Last Ticket".tr(),
                                 style: TextStyle(fontSize: 20, color: Colors.white),
                               ),
                             ],

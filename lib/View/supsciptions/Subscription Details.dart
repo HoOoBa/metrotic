@@ -1,5 +1,6 @@
 
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../helper.dart';
@@ -48,7 +49,7 @@ class _SupscripDetails1State extends State<SupscripDetails1> {
               Image.asset("assets/mon.png",height: 60,width: 60,filterQuality: FilterQuality.high,),
               SizedBox(width: 15,),
               Text(
-                'Tickets Price',
+                'Tickets Price'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 25,
@@ -92,7 +93,7 @@ class _SupscripDetails1State extends State<SupscripDetails1> {
 Image.asset("assets/cash.png",height: 50,width: 50,),
               SizedBox(width: 20,),
               Text(
-                'Plans',
+                'Plans'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 30,

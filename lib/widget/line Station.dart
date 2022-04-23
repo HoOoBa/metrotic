@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../helper.dart';
@@ -47,7 +48,7 @@ int? index2;
           Align(
             alignment: Alignment.topCenter,
             child: Text(
-              "First Line",
+              "First Line".tr(),
               style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

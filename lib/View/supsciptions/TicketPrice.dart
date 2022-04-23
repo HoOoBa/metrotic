@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 
@@ -28,7 +29,7 @@ class _TicketPriceState extends State<TicketPrice> {
               height: 20,
             ),
             Text(
-              "Tickets Price",
+              "Tickets Price".tr(),
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: ColorsHelp.background,
@@ -76,7 +77,7 @@ class _TicketPriceState extends State<TicketPrice> {
                         filterQuality: FilterQuality.high,
                       ),
                       Text(
-                        "9 Station",
+                        "9 Station".tr(),
                         style: TextStyle(color: Colors.white),
                       )
                     ],
@@ -128,7 +129,7 @@ class _TicketPriceState extends State<TicketPrice> {
                         filterQuality: FilterQuality.high,
                       ),
                       Text(
-                        "10-16 Station  ",
+                        "10-16 Station  ".tr(),
                         style: TextStyle(color: Colors.white),
                       )
                     ],
@@ -186,7 +187,7 @@ class _TicketPriceState extends State<TicketPrice> {
                          filterQuality: FilterQuality.high,
                        ),
                        Text(
-                         "16+ Station",
+                         "16+ Station".tr(),
                          style: TextStyle(color: Colors.white),
                        )
                      ],

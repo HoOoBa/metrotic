@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -53,8 +54,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: nameController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "Name",
-                                            hintText: "Enter Your Full Name",
+                                            labelText: "Name".tr(),
+                                            hintText: "Enter Your Full Name".tr(),
                                         ),
                                         keyboardType: TextInputType.name,
                                         autofocus: true,
@@ -69,8 +70,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: phoneController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "Phone Number",
-                                            hintText: "Enter Your Number",
+                                            labelText: "Phone Number".tr(),
+                                            hintText: "Enter Your Number".tr(),
                                         ),
                                         keyboardType: TextInputType.phone,
 
@@ -83,8 +84,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: emailController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "Email",
-                                            hintText: "Enter Your Email",
+                                            labelText: "E_mail".tr(),
+                                            hintText: "Enter Your E_mail".tr(),
                                         ),
                                         keyboardType: TextInputType.emailAddress,
 
@@ -97,8 +98,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: passwordController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "Password",
-                                            hintText: "Enter Your Password",
+                                            labelText: "Password".tr(),
+                                            hintText: "Enter Your Password".tr(),
                                         ),
                                         keyboardType: TextInputType.visiblePassword,
                                         obscureText: true,
@@ -112,8 +113,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: tagIDController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "Tag ID",
-                                            hintText: "Enter Your Tag ID",
+                                            labelText: "Tag ID".tr(),
+                                            hintText: "Enter Your Tag ID".tr(),
                                         ),
                                         keyboardType: TextInputType.visiblePassword,
 
@@ -127,8 +128,8 @@ class _SignUpState extends State<SignUp> {
                                         controller: nationalIDController,
                                         decoration: InputDecoration(
                                             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                                            labelText: "National ID",
-                                            hintText: "Enter Your National ID",
+                                            labelText: "National ID".tr(),
+                                            hintText: "Enter Your National ID".tr(),
                                         ),
                                         keyboardType: TextInputType.visiblePassword,
 
@@ -166,7 +167,7 @@ class _SignUpState extends State<SignUp> {
                                 },
                                 child: Center(
                                     child: Text(
-                                        'Sign Up',
+                                        'Sign Up'.tr(),
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',
                                             fontSize: 13,
@@ -188,7 +189,7 @@ class _SignUpState extends State<SignUp> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                                 Text(
-                                    'Already have an account?',
+                                    'Already have an account?'.tr(),
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontSize: 14,
@@ -205,7 +206,7 @@ class _SignUpState extends State<SignUp> {
 
                                     },
                                     child: Text(
-                                        'Login',
+                                        'Login'.tr(),
 
                                         style: TextStyle(
                                             fontFamily: 'Montserrat',

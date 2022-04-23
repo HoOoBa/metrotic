@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:geocoding/geocoding.dart';
@@ -302,7 +303,7 @@ if(A<B && A<C&&A<D&&A<E){
     markerId: MarkerId("1"),
     position: LatLng(_currentPosition.latitude,_currentPosition.longitude),
     infoWindow: InfoWindow(
-      title: 'From',
+      title: 'From'.tr(),
     ),
     icon: BitmapDescriptor.defaultMarker,
   );
@@ -325,7 +326,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("2"),
     position: LatLng(30.1139678256, 31.2492867704),
     infoWindow: InfoWindow(
-      title:"To" ,
+      title:"To".tr() ,
 
     ),
     icon: BitmapDescriptor.defaultMarker,
@@ -336,7 +337,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("1"),
     position: LatLng(_currentPosition.latitude,_currentPosition.longitude),
     infoWindow: InfoWindow(
-      title: 'From',
+      title: 'From'.tr(),
     ),
     icon: BitmapDescriptor.defaultMarker,
   );
@@ -351,7 +352,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("2"),
     position: LatLng(30.10408, 31.24562),
     infoWindow: InfoWindow(
-      title:"To" ,
+      title:"To".tr() ,
 
     ),
     icon: BitmapDescriptor.defaultMarker,
@@ -362,7 +363,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("1"),
     position: LatLng(_currentPosition.latitude,_currentPosition.longitude),
     infoWindow: InfoWindow(
-      title: 'From',
+      title: 'From'.tr(),
     ),
     icon: BitmapDescriptor.defaultMarker,
   );
@@ -377,7 +378,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("2"),
     position: LatLng(30.0999764249, 31.2462914808),
     infoWindow: InfoWindow(
-      title:"To" ,
+      title:"To".tr() ,
 
     ),
     icon: BitmapDescriptor.defaultMarker,
@@ -388,7 +389,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("1"),
     position: LatLng(_currentPosition.latitude,_currentPosition.longitude),
     infoWindow: InfoWindow(
-      title: 'From',
+      title: 'From'.tr(),
     ),
     icon: BitmapDescriptor.defaultMarker,
   );
@@ -403,7 +404,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("2"),
     position: LatLng(30.0879592, 31.2455034),
     infoWindow: InfoWindow(
-      title:"To" ,
+      title:"To".tr() ,
 
     ),
     icon: BitmapDescriptor.defaultMarker,
@@ -414,7 +415,7 @@ points: [LatLng(_currentPosition.latitude,_currentPosition.longitude),LatLng(30.
     markerId: MarkerId("1"),
     position: LatLng(_currentPosition.latitude,_currentPosition.longitude),
     infoWindow: InfoWindow(
-      title: 'From',
+      title: 'From'.tr(),
     ),
     icon: BitmapDescriptor.defaultMarker,
   );
@@ -608,13 +609,13 @@ setState(() {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Text(
-                            'Stations',
+                            'Stations'.tr(),
                             style: TextStyle(fontSize: 20.0),
                           ),
                           SizedBox(height: 10),
                           _textField(
-                              label: 'Start',
-                              hint: 'Choose starting point',
+                              label: 'Start'.tr(),
+                              hint: 'Choose starting point'.tr(),
                               prefixIcon: Icon(
                                 Icons.looks_one,
                                 color: ColorsHelp.backgroundG,
@@ -642,8 +643,8 @@ setState(() {
                               }),
                           SizedBox(height: 10),
                           _textField(
-                              label: 'Destination',
-                              hint: 'Choose destination',
+                              label: 'Destination'.tr(),
+                              hint: 'Choose destination'.tr(),
                               prefixIcon: Icon(
                                 Icons.looks_two,
                                 color: ColorsHelp.backgroundG,
@@ -660,7 +661,7 @@ setState(() {
                           Visibility(
                             visible: _placeDistance == null ? false : true,
                             child: Text(
-                              'DISTANCE: $_placeDistance km',
+                              'DISTANCE: $_placeDistance km'.tr(),
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -690,7 +691,7 @@ setState(() {
                                             .showSnackBar(
                                           SnackBar(
                                             content: Text(
-                                                'Distance Calculated Sucessfully'),
+                                                'Distance Calculated Sucessfully').tr(),
                                           ),
                                         );
                                       } else {
@@ -698,7 +699,7 @@ setState(() {
                                             .showSnackBar(
                                           SnackBar(
                                             content: Text(
-                                                'Error Calculating Distance'),
+                                                'Error Calculating Distance').tr(),
                                           ),
                                         );
                                       }
@@ -708,7 +709,7 @@ setState(() {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                'Show Route'.toUpperCase(),
+                                'Show Route'.tr().toUpperCase(),
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20.0,

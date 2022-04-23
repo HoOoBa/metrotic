@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../helper.dart';
@@ -24,7 +25,7 @@ class _PlansState extends State<Plans> {
           height: 20,
         ),
         Text(
-          "Plans",
+          "Plans".tr(),
           style: TextStyle(
               fontWeight: FontWeight.bold,
               color: ColorsHelp.background,

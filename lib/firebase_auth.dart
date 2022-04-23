@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -43,7 +44,7 @@ class AuthService {
   Future<String?> resetPassword({required String email}) async {
     try{
       await _firebaseAuth.sendPasswordResetEmail(email: email);
-      return "Done";
+      return "Done".tr();
     } on auth.FirebaseAuthException catch(e){
       return e.message;
     }
@@ -75,9 +76,9 @@ class AuthService {
     try{
       await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
 
-      log("Signed in");
+      log("Signed in".tr());
 
-      showSnackBar(context, "Signed in");
+      showSnackBar(context, "Signed in".tr());
       getUser(email: email, context: context);
     } on auth.FirebaseAuthException catch(e){
 
@@ -111,20 +112,20 @@ class AuthService {
         phoneNumber: phone,
         verificationCompleted: (PhoneAuthCredential credential) {},
         verificationFailed: (FirebaseAuthException e) {
-          if (e.code == 'invalid-phone-number') {
-            print('The provided phone number is not valid.');
+          if (e.code == 'invalid-phone-number'.tr()) {
+            print('The provided phone number is not valid.'.tr());
           }else{
 
             print(e.message);
           }
         },
         codeSent: (String verificationId, int? resendToken) {
-          showSnackBar(context, "Verification Code sent on the phone number");
+          showSnackBar(context, "Verification Code sent on the phone number".tr());
           setData(verificationId);
         },
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
-      return "Signed in";
+      return "Signed in".tr();
     } catch(e){
       print(e.toString());
       return e.toString();
@@ -142,7 +143,7 @@ class AuthService {
 
       Navigator.push(context, MaterialPageRoute(builder: (_)=>Home()));
 
-      showSnackBar(context, "verified");
+      showSnackBar(context, "verified".tr());
     } catch (e) {
       showSnackBar(context, e.toString());
     }
@@ -158,7 +159,7 @@ class AuthService {
     try{
       await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
 
-      showSnackBar(context, "Signed in");
+      showSnackBar(context, "Signed in".tr());
       register(name: name, email: email, phone: phone, tagID: tagID, nationalID: nationalID, context: context);
 
     } on auth.FirebaseAuthException catch(e){

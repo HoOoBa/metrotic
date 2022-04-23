@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../helper.dart';
@@ -24,7 +25,7 @@ class _SupDet2State extends State<SupDet2> {
         child: ListView(
           children: [
 
-            AppBarr(text: ("3Months")),
+            AppBarr(text: ("3Months".tr())),
             SizedBox(
               height: 40,
             ),

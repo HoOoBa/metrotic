@@ -1,6 +1,7 @@
 
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -47,7 +48,7 @@ class _EditInfoState extends State<EditInfo> {
 
         body: SafeArea(child: ListView(children: [
           Column(
-            crossAxisAlignment:CrossAxisAlignment.center,children: [  AppBarr(text: "Edit Information"),
+            crossAxisAlignment:CrossAxisAlignment.center,children: [  AppBarr(text: "Edit Information".tr()),
             SizedBox(height: 20,),
             Row(mainAxisAlignment:MainAxisAlignment.center,children: [  Person(high: 150, width: 150, color: ColorsHelp.background, color2: Colors.white, size: 100, reduis: 150),
               InkWell(
@@ -87,7 +88,7 @@ class _EditInfoState extends State<EditInfo> {
                                       ),
                                       Text(
 
-                                        "Camera",
+                                        "Camera".tr(),
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
 
@@ -119,7 +120,7 @@ class _EditInfoState extends State<EditInfo> {
                                       ),
                                       Text(
 
-                                        "Gallery",
+                                        "Gallery".tr(),
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 15,
@@ -156,7 +157,7 @@ class _EditInfoState extends State<EditInfo> {
                 child: Center(
                   child: ListTile(
                       title:Text(
-                        'Your Name ',
+                        'Your Name '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
@@ -188,7 +189,7 @@ class _EditInfoState extends State<EditInfo> {
                 child: Center(
                   child: ListTile(
                       title:Text(
-                        'Phone Number ',
+                        'Phone Number '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
@@ -220,7 +221,7 @@ class _EditInfoState extends State<EditInfo> {
                 child: Center(
                   child: ListTile(
                       title:Text(
-                        'National ID ',
+                        'National ID '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
@@ -253,7 +254,7 @@ class _EditInfoState extends State<EditInfo> {
               child: Center(
                   child: ListTile(
                       title:Text(
-                        'TagID ',
+                        'TagID '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
@@ -286,7 +287,7 @@ class _EditInfoState extends State<EditInfo> {
               child: Center(
                   child: ListTile(
                       title:Text(
-                        'Email ',
+                        'Email '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
@@ -319,7 +320,7 @@ class _EditInfoState extends State<EditInfo> {
               child: Center(
                   child: ListTile(
                       title:Text(
-                        'Password ',
+                        'Password '.tr(),
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',

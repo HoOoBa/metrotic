@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       items: <Bubble>[
         // Floating action menu item
         Bubble(
-          title: "Search Your Destination",
+          title: "Search Your Destination".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.search,
@@ -68,7 +69,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
         // Floating action menu item
         Bubble(
-          title: "Nearest station to me",
+          title: "Nearest station to me".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.near_me,
@@ -81,7 +82,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           },
         ),
         Bubble(
-          title: "Get your location",
+          title: "Get your location".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.my_location,
@@ -97,7 +98,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
         //Floating action menu item
         Bubble(
-          title: " All Stations",
+          title: " All Stations".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.train,
@@ -112,7 +113,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
 
         Bubble(
-          title: "Satellite",
+          title: "Satellite".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.satellite_alt,
@@ -126,7 +127,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           },
         ),
         Bubble(
-          title: "Map",
+          title: "Map".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.map_outlined,
@@ -172,7 +173,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           //position of marker
           infoWindow: InfoWindow(
             //popup info
-            title: 'Shubra El Kheima ',
+            title: 'Shubra El Kheima '.tr(),
             snippet: 'Shark El Seka El Hadid, Shubra El Kheima',
           ),
           icon: await BitmapDescriptor.fromBytes(markerIcon)
@@ -331,7 +332,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       items: <Bubble>[
         // Floating action menu item
         Bubble(
-          title: "Search Your Destination",
+          title: "Search Your Destination".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.search,
@@ -347,7 +348,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
         // Floating action menu item
         Bubble(
-          title: "Nearest station to me",
+          title: "Nearest station to me".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.near_me,
@@ -360,7 +361,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           },
         ),
         Bubble(
-          title: "Get your location",
+          title: "Get your location".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.my_location,
@@ -376,7 +377,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
         //Floating action menu item
         Bubble(
-          title: " All Stations",
+          title: " All Stations".tr(),
           iconColor: ColorsHelp.backgroundG,
           bubbleColor: ColorsHelp.background,
           icon: Icons.train,
@@ -514,7 +515,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       softWrap: false,
                     ),
                     Text(
-                      'Daily ticket',
+                      'Daily ticket'.tr(),
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 15,
@@ -529,7 +530,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       height: 20,
                     ),
                     Text(
-                      'Good Morning kamal :)',
+                      'Good Morning kamal :)'.tr(),
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 12,
@@ -541,7 +542,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       softWrap: false,
                     ),
                     Text(
-                      "Where Do You Want \n To Go Today ?",
+                      "Where Do You Want \n To Go Today ?".tr(),
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 20,
@@ -805,7 +806,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     ),
                                     GestureDetector(
                                       child: Text(
-                                        "From Station",
+                                        "From Station".tr(),
                                         style:
                                         TextStyle(color: ColorsHelp.background),
                                       ),
@@ -855,7 +856,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                   child: Text(
-                                                                    "First Line",
+                                                                    "First Line".tr(),
                                                                     style: TextStyle(
                                                                         fontWeight:
                                                                         FontWeight
@@ -966,7 +967,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                     child: Text(
-                                                                      "Second Line",
+                                                                      "Second Line".tr(),
                                                                       style: TextStyle(
                                                                           fontWeight:
                                                                           FontWeight
@@ -1002,7 +1003,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                   child: Text(
-                                                                    "Third Line",
+                                                                    "Third Line".tr(),
                                                                     style: TextStyle(
                                                                         fontWeight:
                                                                         FontWeight
@@ -1062,7 +1063,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                     ),
                                     GestureDetector(
                                       child: Text(
-                                        "To Station",
+                                        "To Station".tr(),
                                         style:
                                         TextStyle(color: ColorsHelp.background),
                                       ),
@@ -1112,7 +1113,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                   child: Text(
-                                                                    "First Line",
+                                                                    "First Line".tr(),
                                                                     style: TextStyle(
                                                                         fontWeight:
                                                                         FontWeight
@@ -1223,7 +1224,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                     child: Text(
-                                                                      "Second Line",
+                                                                      "Second Line".tr(),
                                                                       style: TextStyle(
                                                                           fontWeight:
                                                                           FontWeight
@@ -1259,7 +1260,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                                               GestureDetector(
                                                                 child: Center(
                                                                   child: Text(
-                                                                    "Third Line",
+                                                                    "Third Line".tr(),
                                                                     style: TextStyle(
                                                                         fontWeight:
                                                                         FontWeight
@@ -1334,7 +1335,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                         size: 30,
                                       )),
                                   Text(
-                                    "Booking Tickets",
+                                    "Booking Tickets".tr(),
                                     style: TextStyle(
                                         fontSize: 17,
                                         fontWeight: FontWeight.bold,

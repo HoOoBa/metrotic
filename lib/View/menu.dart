@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class Menu extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '- Profile',
+                          '- Profile'.tr(),
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 23,
@@ -74,7 +75,7 @@ class Menu extends StatelessWidget {
                           softWrap: false,
                         ),
                         Text(
-                          '    Control your information.',
+                          '    Control your information.'.tr(),
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 12,
@@ -96,7 +97,7 @@ class Menu extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '- Current balance',
+                          '- Current balance'.tr(),
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 23,
@@ -109,7 +110,7 @@ class Menu extends StatelessWidget {
                           softWrap: false,
                         ),
                         Text(
-                          '    Control payment methods and wallet.',
+                          '    Control payment methods and wallet.'.tr(),
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 12,
@@ -134,7 +135,7 @@ class Menu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '- Subscription Details',
+                        '- Subscription Details'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 23,
@@ -147,7 +148,7 @@ class Menu extends StatelessWidget {
                         softWrap: false,
                       ),
                       Text(
-                        '    Metro Subscription plans & How to Subscribe.',
+                        '    Metro Subscription plans & How to Subscribe.'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -170,7 +171,7 @@ class Menu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '- Guide',
+                        '- Guide'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 23,
@@ -183,7 +184,7 @@ class Menu extends StatelessWidget {
                         softWrap: false,
                       ),
                       Text(
-                        '    Guideline to help you reach your destination.',
+                        '    Guideline to help you reach your destination.'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -209,7 +210,7 @@ class Menu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '- Metro map',
+                        '- Metro map'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 23,
@@ -222,7 +223,7 @@ class Menu extends StatelessWidget {
                         softWrap: false,
                       ),
                       Text(
-                        '    Show all Metro lines and stations.',
+                        '    Show all Metro lines and stations.'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -245,7 +246,7 @@ class Menu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '- Book metro ticket',
+                        '- Book metro ticket'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 23,
@@ -258,7 +259,7 @@ class Menu extends StatelessWidget {
                         softWrap: false,
                       ),
                       Text(
-                        '    search for an in/out stations to book a ticket.',
+                        '    search for an in/out stations to book a ticket.'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -284,7 +285,7 @@ class Menu extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '- About',
+                        '- About'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 23,
@@ -297,7 +298,7 @@ class Menu extends StatelessWidget {
                         softWrap: false,
                       ),
                       Text(
-                        '    Information about the app and how to use it.',
+                        '    Information about the app and how to use it.'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -323,7 +324,7 @@ class Menu extends StatelessWidget {
                     },
                     child: Center(
                       child: Text(
-                        'Sign out',
+                        'Sign out'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 29,

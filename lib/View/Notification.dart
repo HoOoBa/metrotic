@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -30,7 +31,7 @@ class Notif extends StatelessWidget {
                             color: Colors.green,size: 30,
                           )),
                       Text(
-                        "Notification",
+                        "Notification".tr(),
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -87,7 +88,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been booked \nsuccessfully',
+                            'your ticket has been booked \nsuccessfully'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,
@@ -122,7 +123,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been booked \nsuccessfully',
+                            'your ticket has been booked \nsuccessfully'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,
@@ -156,7 +157,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been Expired',
+                            'your ticket has been Expired'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,
@@ -189,7 +190,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been booked \nsuccessfully',
+                            'your ticket has been booked \nsuccessfully'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,
@@ -222,7 +223,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been booked \nsuccessfully',
+                            'your ticket has been booked \nsuccessfully'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,
@@ -255,7 +256,7 @@ class Notif extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            'your ticket has been Expired',
+                            'your ticket has been Expired'.tr(),
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 15,

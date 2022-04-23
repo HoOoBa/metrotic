@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -25,7 +26,7 @@ class _SupDet1State extends State<SupDet1> {
       body: SafeArea(
         child: ListView(
           children: [
-            AppBarr(text: ("Monthly")),
+            AppBarr(text: ("Monthly").tr()),
             SizedBox(
               height: 40,
             ),

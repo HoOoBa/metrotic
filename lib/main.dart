@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: context.supportedLocales,
         locale: context.locale,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demoo',
+      title: 'Flutter Demoflutter run --no-sound-null-safetyo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

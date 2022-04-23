@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../helper.dart';
@@ -101,7 +102,7 @@ Icon(Icons.email,color: ColorsHelp.background,size: 40,)  ,            SizedBox(
               Image.asset("assets/fac.png",height: 60,width: 60,filterQuality: FilterQuality.high,),
               SizedBox(width: 15,),
               Text(
-                '@Metrotic',
+                '@Metrotic'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 20,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'AppBar.dart';
@@ -9,7 +10,7 @@ class MapMetro extends StatelessWidget {
     return Scaffold(
         body:
         SafeArea(child: ListView(children: [
-          AppBarr(text: "Metro Map"),
+          AppBarr(text: "Metro Map".tr()),
           SizedBox(height: 50,),
 
           Container(

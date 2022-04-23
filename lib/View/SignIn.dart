@@ -50,8 +50,8 @@ class _SignInState extends State<SignIn> {
                       controller: emailController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                        labelText: "Email",
-                        hintText: "Enter Your Email",
+                        labelText: "email".tr(),
+                        hintText: "Enter Your Email".tr(),
                       ),
                       keyboardType: TextInputType.emailAddress,
 
@@ -63,8 +63,8 @@ class _SignInState extends State<SignIn> {
                       controller: passwordController,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-                        labelText: "Password",
-                        hintText: "Enter Your Password",
+                        labelText: "Password".tr(),
+                        hintText: "Enter Your Password".tr(),
                       ),
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: true,

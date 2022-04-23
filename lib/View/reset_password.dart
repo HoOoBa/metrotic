@@ -1,5 +1,6 @@
 
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -39,7 +40,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               height: 250,
             ),
             Text(
-              'Reset Password',
+              'Reset Password'.tr(),
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
@@ -51,7 +52,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               height: 5,
             ),
             Text(
-              'Please enter your email address',
+              'Please enter your email address'.tr(),
               style: TextStyle(
               color: const Color(0xff00334a),
 
@@ -64,8 +65,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           controller: emailController,
           decoration: InputDecoration(
             border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(32.0))),
-            labelText: "Email",
-            hintText: "Enter Your Email",
+            labelText: "Email".tr(),
+            hintText: "Enter Your Email".tr(),
           ),
           keyboardType: TextInputType.emailAddress,
 
@@ -73,6 +74,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
             SizedBox(
               height: 40,
             ),
+            Container(
+              alignment: Alignment.center,
+  child:
             GestureDetector(
               onTap: () {
 
@@ -86,7 +90,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
 
               },
               child: Container(
-                  margin: EdgeInsets.only(left:width>1000?width*0.45:width> 400?width*0.40:100,right: width>1000?width*0.45:width> 400?width*0.40:100),
                   width: 190.0,
                   height: 55.0,
                   decoration: BoxDecoration(
@@ -106,7 +109,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     child: Center(
 
                       child: Text(
-                        'Reset password',
+                        'Reset Password'.tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 13,
@@ -122,7 +125,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     ),
                   )),
             ),
-
+        )
           ],
         ),
       ),

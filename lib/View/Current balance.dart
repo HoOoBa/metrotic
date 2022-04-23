@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _CurrentBalanceState extends State<CurrentBalance> {
            Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-                         AppBarr(text: "Current Balance"),
+                         AppBarr(text: "Current Balance".tr()),
 
               SizedBox(
                 height: 50,
@@ -55,7 +56,7 @@ class _CurrentBalanceState extends State<CurrentBalance> {
                           size: 50,
                         ),
                         Text(
-                          'Total wallet balance',
+                          'Total wallet balance'.tr(),
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontSize: 18,
@@ -92,7 +93,7 @@ class _CurrentBalanceState extends State<CurrentBalance> {
               Divider(color: ColorsHelp.background,thickness: 2,)
               ,SizedBox(height: 10,),
               Text(
-                'Payment Method',
+                'Payment Method'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 18,
@@ -136,7 +137,7 @@ Container(
 ],),
 ),SizedBox(height: 10,),
               Text(
-                'Add New',
+                'Add New'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 18,
@@ -153,7 +154,7 @@ Container(
               SizedBox(height: 10,),
 
               Text(
-                'Last Transations',
+                'Last Transations'.tr(),
                 style: TextStyle(
                   fontFamily: 'Montserrat',
                   fontSize: 18,
@@ -186,7 +187,7 @@ Container(
                   SizedBox(width: 10,),
 
                   Text(
-                    'From Helwan to Ell_oba',
+                    'From Helwan to Ell_oba'.tr(),
                     style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontSize: 15,

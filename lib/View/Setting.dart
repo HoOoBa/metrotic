@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _SettingState extends State<Setting> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              AppBarr(text: "Setting"),
+              AppBarr(text: "Setting".tr()),
             GestureDetector(onTap: (){                        Navigator.push(context, MaterialPageRoute(builder: (_)=>EditInfo()));
             },child:   Container(
                 height: 120,
@@ -29,7 +30,7 @@ class _SettingState extends State<Setting> {
                   child: ListTile(
                     trailing: Icon(Icons.arrow_forward_ios,color: Colors.green,size: 30,),
                     title: Text(
-                      "Edit Information",
+                      "Edit Information".tr(),
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
@@ -38,7 +39,7 @@ class _SettingState extends State<Setting> {
                       ),
                     ),
                     subtitle: Text(
-                      'Edit your profile information ',
+                      'Edit your profile information '.tr(),
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 12,
@@ -59,7 +60,7 @@ class _SettingState extends State<Setting> {
                      trailing: Icon(Icons.arrow_forward_ios,color: Colors.green,size: 30,),
 
                      title: Text(
-                       "Language",
+                       "Language".tr(),
                        style: TextStyle(
                          fontWeight: FontWeight.bold,
                          fontSize: 18,
@@ -68,7 +69,7 @@ class _SettingState extends State<Setting> {
                        ),
                      ),
                      subtitle: Text(
-                       'Change your Language ',
+                       'Change your Language '.tr(),
                        style: TextStyle(
                          fontFamily: 'Montserrat',
                          fontSize: 12,
@@ -91,7 +92,7 @@ class _SettingState extends State<Setting> {
                      trailing: Icon(Icons.arrow_forward_ios,color: Colors.green,size: 30,),
 
                      title: Text(
-                       "Payment",
+                       "Payment".tr(),
                        style: TextStyle(
                          fontWeight: FontWeight.bold,
                          fontSize: 18,
@@ -100,7 +101,7 @@ class _SettingState extends State<Setting> {
                        ),
                      ),
                      subtitle: Text(
-                       'Control all Payment Method',
+                       'Control all Payment Method'.tr(),
                        style: TextStyle(
                          fontFamily: 'Montserrat',
                          fontSize: 12,
@@ -118,7 +119,7 @@ class _SettingState extends State<Setting> {
               Center(child:GestureDetector(
                 onTap: (){},
                 child:  Text(
-                "Sign Out",
+                "Sign Out".tr(),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
