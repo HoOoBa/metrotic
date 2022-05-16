@@ -39,7 +39,8 @@ dependencies:
   sliding_up_panel:
   jumping_bottom_nav_bar:
   expandable:
-  google_maps_flutter:
+  # google_maps_flutter:
+  google_maps_flutter: ^2.1.5
   flutter_polyline_points:
   floating_action_bubble: 1.1.4
   flutter_sliding_up_panel:
@@ -51,7 +52,8 @@ dependencies:
   firebase_auth_web:
   shared_preferences:
   firebase_messaging: ^11.2.15
-  flutter_local_notifications: ^9.4.1
+  flutter_local_notifications: ^9.5.3+1
+  rxdart: ^0.27.3
 dev_dependencies:
   flutter_test:
     sdk: flutter

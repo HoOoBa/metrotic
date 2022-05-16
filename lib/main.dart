@@ -33,7 +33,6 @@ late AndroidNotificationChannel channel;
 /// Initialize the [FlutterLocalNotificationsPlugin] package.
 late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
 
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -46,7 +45,8 @@ Future<void> main() async {
     channel = const AndroidNotificationChannel(
       'high_importance_channel', // id
       'High Importance Notifications', // title
-      description: 'This channel is used for important notifications.', // description
+      description:
+          'This channel is used for important notifications.', // description
       importance: Importance.high,
     );
 
@@ -58,7 +58,7 @@ Future<void> main() async {
     /// default FCM channel to enable heads up notifications.
     await flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
-        AndroidFlutterLocalNotificationsPlugin>()
+            AndroidFlutterLocalNotificationsPlugin>()
         ?.createNotificationChannel(channel);
 
     /// Update the iOS foreground notification presentation options to allow
@@ -70,7 +70,7 @@ Future<void> main() async {
       sound: true,
     );
   }
-runApp(
+  runApp(
     EasyLocalization(
       supportedLocales: [Locale('en', 'US'), Locale('ar', 'EG')],
       path: 'assets/translate', // <-- change patch to your
@@ -84,33 +84,30 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return 
-  MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => GetImage()),
-        Provider<AuthService>(
-          create: (_) => AuthService(FirebaseAuth.instance),
-        ),
-      ],
-      child:    MaterialApp(
-        localizationsDelegates: context.localizationDelegates,
-        supportedLocales: context.supportedLocales,
-        locale: context.locale,
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demoflutter run --no-sound-null-safetyo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-    initialRoute: '/',
-    routes: {
-    '/': (context) => Splash(),
-    '/sign_in': (context) => SignIn(),
-    '/sign_up': (context) => SignUp(),
-    '/home_screen': (context) => Home(),
-    '/verification': (context) => Verification(),
-    '/reset_password': (context) => ResetPasswordScreen(),
-    }
-    )
-  );
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => GetImage()),
+          Provider<AuthService>(
+            create: (_) => AuthService(FirebaseAuth.instance),
+          ),
+        ],
+        child: MaterialApp(
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: context.locale,
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demoflutter run --no-sound-null-safetyo',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            initialRoute: '/',
+            routes: {
+              '/': (context) => Splash(),
+              '/sign_in': (context) => SignIn(),
+              '/sign_up': (context) => SignUp(),
+              '/home_screen': (context) => Home(),
+              '/verification': (context) => Verification(),
+              '/reset_password': (context) => ResetPasswordScreen(),
+            }));
   }
 }

@@ -21,12 +21,11 @@ class _CurrentBalanceState extends State<CurrentBalance> {
           index: 1,
         ),
         body: SafeArea(
-          child:ListView( children: [
-           Column(
+            child: ListView(children: [
+          Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-                         AppBarr(text: "Current Balance".tr()),
-
+              AppBarr(text: "Current Balance".tr()),
               SizedBox(
                 height: 50,
               ),
@@ -86,12 +85,19 @@ class _CurrentBalanceState extends State<CurrentBalance> {
                           TextHeightBehavior(applyHeightToFirstAscent: false),
                       softWrap: false,
                     ),
-
                   ],
                 ),
-              ),  SizedBox(height: 10,),
-              Divider(color: ColorsHelp.background,thickness: 2,)
-              ,SizedBox(height: 10,),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Divider(
+                color: ColorsHelp.background,
+                thickness: 2,
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 'Payment Method'.tr(),
                 style: TextStyle(
@@ -101,41 +107,51 @@ class _CurrentBalanceState extends State<CurrentBalance> {
                   fontWeight: FontWeight.w500,
                   height: 1.5,
                 ),
-                textHeightBehavior: TextHeightBehavior(
-                    applyHeightToFirstAscent: false),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
                 softWrap: false,
               ),
-          SizedBox(height: 15,),
-Container(
-  padding: EdgeInsets.only(left: 10),
-  height: 80,width: 300,
-  decoration: BoxDecoration(
-      color: ColorsHelp.background,
-      borderRadius: BorderRadius.circular(25),
-      boxShadow: [
-        BoxShadow(
-            offset: Offset(1, 3),
-            blurRadius: 3,
-            color: Colors.grey)
-      ]),child: Row(children: [
-        Image.asset("assets/visa.png"),
-  SizedBox(width: 10,),
-
-  Text(
-    '1233 4583 5453 5453',
-    style: TextStyle(
-      fontFamily: 'Montserrat',
-      fontSize: 18,
-      color: Colors.white,
-      fontWeight: FontWeight.w500,
-      height: 1.5,
-    ),
-    textHeightBehavior: TextHeightBehavior(
-        applyHeightToFirstAscent: false),
-    softWrap: false,
-  ),
-],),
-),SizedBox(height: 10,),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 10),
+                height: 80,
+                width: 300,
+                decoration: BoxDecoration(
+                    color: ColorsHelp.background,
+                    borderRadius: BorderRadius.circular(25),
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(1, 3),
+                          blurRadius: 3,
+                          color: Colors.grey)
+                    ]),
+                child: Row(
+                  children: [
+                    Image.asset("assets/visa.png"),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '1233 4583 5453 5453',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 18,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w500,
+                        height: 1.5,
+                      ),
+                      textHeightBehavior:
+                          TextHeightBehavior(applyHeightToFirstAscent: false),
+                      softWrap: false,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 'Add New'.tr(),
                 style: TextStyle(
@@ -145,14 +161,20 @@ Container(
                   fontWeight: FontWeight.w500,
                   height: 1.5,
                 ),
-                textHeightBehavior: TextHeightBehavior(
-                    applyHeightToFirstAscent: false),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
                 softWrap: false,
               ),
-              SizedBox(height: 10,),
-              Divider(color: ColorsHelp.background,thickness: 2,),
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
+              Divider(
+                color: ColorsHelp.background,
+                thickness: 2,
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 'Last Transations'.tr(),
                 style: TextStyle(
@@ -162,69 +184,78 @@ Container(
                   fontWeight: FontWeight.w500,
                   height: 1.5,
                 ),
-                textHeightBehavior: TextHeightBehavior(
-                    applyHeightToFirstAscent: false),
+                textHeightBehavior:
+                    TextHeightBehavior(applyHeightToFirstAscent: false),
                 softWrap: false,
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Container(
-                padding: EdgeInsets.only(left: 10),
-                height: 80,width: 300,
-                decoration: BoxDecoration(
-                    color: ColorsHelp.background,
-                    borderRadius: BorderRadius.circular(25),
-                    boxShadow: [
-                      BoxShadow(
-                          offset: Offset(1, 3),
-                          blurRadius: 3,
-                          color: Colors.grey)
-                    ]),child:Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-
-                Row(children: [
-                  Image.asset("assets/tick.png"),
-                  SizedBox(width: 10,),
-
-                  Text(
-                    'From Helwan to Ell_oba'.tr(),
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 15,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                      height: 1.5,
-                    ),
-                    textHeightBehavior: TextHeightBehavior(
-                        applyHeightToFirstAscent: false),
-                    softWrap: false,
-                  ),
-                ],),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      '10 LE',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 18,
-                        color: Colors.green,
-                        fontWeight: FontWeight.w500,
-                        height: 1.5,
+                  padding: EdgeInsets.only(left: 10),
+                  height: 80,
+                  width: 300,
+                  decoration: BoxDecoration(
+                      color: ColorsHelp.background,
+                      borderRadius: BorderRadius.circular(25),
+                      boxShadow: [
+                        BoxShadow(
+                            offset: Offset(1, 3),
+                            blurRadius: 3,
+                            color: Colors.grey)
+                      ]),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset("assets/tick.png"),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'From Helwan to Ell_oba'.tr(),
+                            style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontSize: 15,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              height: 1.5,
+                            ),
+                            textHeightBehavior: TextHeightBehavior(
+                                applyHeightToFirstAscent: false),
+                            softWrap: false,
+                          ),
+                        ],
                       ),
-                      textHeightBehavior: TextHeightBehavior(
-                          applyHeightToFirstAscent: false),
-                      softWrap: false,
-                    ),  SizedBox(width: 10,)
-                  ],
-                )
-              ],)
-              ),SizedBox(height: 10,),
-
-
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            '10 LE',
+                            style: TextStyle(
+                              fontFamily: 'Montserrat',
+                              fontSize: 18,
+                              color: Colors.green,
+                              fontWeight: FontWeight.w500,
+                              height: 1.5,
+                            ),
+                            textHeightBehavior: TextHeightBehavior(
+                                applyHeightToFirstAscent: false),
+                            softWrap: false,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          )
+                        ],
+                      )
+                    ],
+                  )),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ])));
   }
 }
-

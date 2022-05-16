@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 
 import '../../helper.dart';
+import '../../notification_service.dart';
 import '../../widget/AppBar.dart';
 import '../../widget/botom Bar.dart';
 
@@ -42,109 +43,69 @@ class _TicketPriceState extends State<TicketPrice> {
               thickness: 2,
               color: ColorsHelp.background,
             ),
-            SizedBox(height: 20,),
-
-          GestureDetector(onTap: (){
-            showAnimatedDialog(
-              context: context,
-              barrierDismissible: true,
-              builder: (BuildContext context) {
-                return Align(
-                  alignment: Alignment.center,
-                  child: Image.asset("assets/done.png"),
-                );
-              },
-              animationType: DialogTransitionType.scale,
-              curve: Curves.fastOutSlowIn,
-              duration: Duration(seconds: 1),
-            );
-          },child:   Container(
-            height: 80,
-            width: 320,
-            decoration: BoxDecoration(
-                color: ColorsHelp.background,
-                borderRadius: BorderRadius.circular(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        "assets/tick.png",
-                        height: 60,
-                        width: 60,
-                        filterQuality: FilterQuality.high,
-                      ),
-                      Text(
-                        "9 Station".tr(),
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: 15),
-                  child: Text(
-                    "5 L.E",
-                    style: TextStyle(color: ColorsHelp.backgroundG,fontSize: 15,fontWeight: FontWeight.bold),
-                  ),
-                )
-              ],
+            SizedBox(
+              height: 20,
             ),
-          ),),
-            SizedBox(height: 20,),
-            Divider(thickness: 1,color: ColorsHelp.background,),
-            SizedBox(height: 20,),
-          GestureDetector(onTap: (){
-            showAnimatedDialog(
-              context: context,
-              barrierDismissible: true,
-              builder: (BuildContext context) {
-                return Align(
-                  alignment: Alignment.center,
-                  child: Image.asset("assets/done.png"),
+            GestureDetector(
+              onTap: () {
+                showAnimatedDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  builder: (BuildContext context) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Image.asset("assets/done.png"),
+                    );
+                  },
+                  animationType: DialogTransitionType.scale,
+                  curve: Curves.fastOutSlowIn,
+                  duration: Duration(seconds: 1),
                 );
+                NotificationService.showNotification(
+                    title: 'Ticket Purchased',
+                    body: 'You have purchased a ticket',
+                    payload: 'purchased',
+                    context: context);
               },
-              animationType: DialogTransitionType.scale,
-              curve: Curves.fastOutSlowIn,
-              duration: Duration(seconds: 1),
-            );
-          },child:   Container(
-            height: 80,
-            width: 320,
-            decoration: BoxDecoration(
-                color: ColorsHelp.background,
-                borderRadius: BorderRadius.circular(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        "assets/tick.png",
-                        height: 60,
-                        width: 60,
-                        filterQuality: FilterQuality.high,
+              child: Container(
+                height: 80,
+                width: 320,
+                decoration: BoxDecoration(
+                    color: ColorsHelp.background,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/tick.png",
+                            height: 60,
+                            width: 60,
+                            filterQuality: FilterQuality.high,
+                          ),
+                          Text(
+                            "9 Station".tr(),
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
                       ),
-                      Text(
-                        "10-16 Station  ".tr(),
-                        style: TextStyle(color: Colors.white),
-                      )
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Text(
+                        "5 L.E",
+                        style: TextStyle(
+                            color: ColorsHelp.backgroundG,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
                 ),
-                Padding(
-                  padding: EdgeInsets.only(right: 15),
-                  child: Text(
-                    "7 L.E",
-                    style: TextStyle(color: ColorsHelp.backgroundG,fontSize: 15,fontWeight: FontWeight.bold),
-                  ),
-                )
-              ],
+              ),
             ),
-          ),),
             SizedBox(
               height: 20,
             ),
@@ -152,57 +113,139 @@ class _TicketPriceState extends State<TicketPrice> {
               thickness: 1,
               color: ColorsHelp.background,
             ),
-            SizedBox(height: 20,),
-
-           GestureDetector(onTap: (){
-             showAnimatedDialog(
-               context: context,
-               barrierDismissible: true,
-               builder: (BuildContext context) {
-                 return Align(
-                   alignment: Alignment.center,
-                   child: Image.asset("assets/done.png"),
-                 );
-               },
-               animationType: DialogTransitionType.scale,
-               curve: Curves.fastOutSlowIn,
-               duration: Duration(seconds: 1),
-             );
-           },child:  Container(
-             height: 80,
-             width: 320,
-             decoration: BoxDecoration(
-                 color: ColorsHelp.background,
-                 borderRadius: BorderRadius.circular(20)),
-             child: Row(
-               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               children: [
-                 Container(
-                   child: Row(
-                     children: [
-                       Image.asset(
-                         "assets/tick.png",
-                         height: 60,
-                         width: 60,
-                         filterQuality: FilterQuality.high,
-                       ),
-                       Text(
-                         "16+ Station".tr(),
-                         style: TextStyle(color: Colors.white),
-                       )
-                     ],
-                   ),
-                 ),
-                 Padding(
-                   padding: EdgeInsets.only(right: 15),
-                   child: Text(
-                     "10 L.E",
-                     style: TextStyle(color: ColorsHelp.backgroundG,fontSize: 15,fontWeight: FontWeight.bold),
-                   ),
-                 )
-               ],
-             ),
-           ),)
+            SizedBox(
+              height: 20,
+            ),
+            GestureDetector(
+              onTap: () {
+                showAnimatedDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  builder: (BuildContext context) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Image.asset("assets/done.png"),
+                    );
+                  },
+                  animationType: DialogTransitionType.scale,
+                  curve: Curves.fastOutSlowIn,
+                  duration: Duration(seconds: 1),
+                );
+                NotificationService.showNotification(
+                    title: 'Ticket Purchased',
+                    body: 'You have purchased a ticket',
+                    payload: 'purchased',
+                    context: context);
+              },
+              child: Container(
+                height: 80,
+                width: 320,
+                decoration: BoxDecoration(
+                    color: ColorsHelp.background,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/tick.png",
+                            height: 60,
+                            width: 60,
+                            filterQuality: FilterQuality.high,
+                          ),
+                          Text(
+                            "10-16 Station  ".tr(),
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Text(
+                        "7 L.E",
+                        style: TextStyle(
+                            color: ColorsHelp.backgroundG,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Divider(
+              thickness: 1,
+              color: ColorsHelp.background,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            GestureDetector(
+              onTap: () {
+                showAnimatedDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  builder: (BuildContext context) {
+                    return Align(
+                      alignment: Alignment.center,
+                      child: Image.asset("assets/done.png"),
+                    );
+                  },
+                  animationType: DialogTransitionType.scale,
+                  curve: Curves.fastOutSlowIn,
+                  duration: Duration(seconds: 1),
+                );
+                NotificationService.showNotification(
+                    title: 'Ticket Purchased',
+                    body: 'You have purchased a ticket',
+                    payload: 'purchased',
+                    context: context);
+              },
+              child: Container(
+                height: 80,
+                width: 320,
+                decoration: BoxDecoration(
+                    color: ColorsHelp.background,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            "assets/tick.png",
+                            height: 60,
+                            width: 60,
+                            filterQuality: FilterQuality.high,
+                          ),
+                          Text(
+                            "16+ Station".tr(),
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 15),
+                      child: Text(
+                        "10 L.E",
+                        style: TextStyle(
+                            color: ColorsHelp.backgroundG,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),

@@ -7,6 +7,16 @@ import '../widget/botom Bar.dart';
 import 'menu.dart';
 
 class Notif extends StatelessWidget {
+  final bool? isBooking;
+  final bool? isExpired;
+  final bool? isPurchased;
+  final bool? isLogin;
+  Notif(
+      {this.isBooking = false,
+      this.isExpired = false,
+      this.isPurchased = false,
+      this.isLogin = false});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +38,8 @@ class Notif extends StatelessWidget {
                           },
                           icon: Icon(
                             Icons.arrow_back_ios,
-                            color: Colors.green,size: 30,
+                            color: Colors.green,
+                            size: 30,
                           )),
                       Text(
                         "Notification".tr(),
@@ -61,7 +72,7 @@ class Notif extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 15,right: 15),
+              padding: EdgeInsets.only(left: 15, right: 15),
               height: MediaQuery.of(context).size.height - 200,
               decoration: BoxDecoration(
                 color: const Color(0xff00334a),
@@ -73,203 +84,283 @@ class Notif extends StatelessWidget {
                     children: [
                       SizedBox(
                         height: 40,
+                      ),
+                      isLogin!
+                          ? Row(
+                              children: [
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.notifications_active,
+                                      color: Colors.green,
+                                      size: 40,
+                                    )),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'You have been successfully logged in',
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 15,
+                                    color: const Color(0xffffffff),
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.5294117647058822,
+                                  ),
+                                  textHeightBehavior: TextHeightBehavior(
+                                      applyHeightToFirstAscent: false),
+                                  softWrap: false,
+                                )
+                              ],
+                            )
+                          : Container(),
+                      isBooking!
+                          ? Row(
+                              children: [
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.notifications_active,
+                                      color: Colors.green,
+                                      size: 40,
+                                    )),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'your ticket has been booked \nsuccessfully'
+                                      .tr(),
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 15,
+                                    color: const Color(0xffffffff),
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.5294117647058822,
+                                  ),
+                                  textHeightBehavior: TextHeightBehavior(
+                                      applyHeightToFirstAscent: false),
+                                  softWrap: false,
+                                )
+                              ],
+                            )
+                          : Container(),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Divider(
+                      //   color: Colors.white,
+                      //   thickness: 2,
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Row(
+                      //   children: [
+                      //     IconButton(
+                      //         onPressed: () {},
+                      //         icon: Icon(
+                      //           Icons.notifications_active,
+                      //           color: Colors.green,
+                      //           size: 40,
+                      //         )),
+                      //     SizedBox(
+                      //       width: 10,
+                      //     ),
+                      //     Text(
+                      //       'your ticket has been booked \nsuccessfully'.tr(),
+                      //       style: TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontSize: 15,
+                      //         color: const Color(0xffffffff),
+                      //         fontWeight: FontWeight.w500,
+                      //         height: 1.5294117647058822,
+                      //       ),
+                      //       textHeightBehavior:
+                      //           TextHeightBehavior(applyHeightToFirstAscent: false),
+                      //       softWrap: false,
+                      //     )
+                      //   ],
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Divider(
+                      //   color: Colors.white,
+                      //   thickness: 2,
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      isExpired!
+                          ? Row(
+                              children: [
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.notifications_active,
+                                      color: Colors.green,
+                                      size: 40,
+                                    )),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'your ticket has been Expired'.tr(),
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 15,
+                                    color: const Color(0xffffffff),
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.5294117647058822,
+                                  ),
+                                  textHeightBehavior: TextHeightBehavior(
+                                      applyHeightToFirstAscent: false),
+                                  softWrap: false,
+                                )
+                              ],
+                            )
+                          : Container(),
 
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.green,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been booked \nsuccessfully'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      ),
-
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Divider(color: Colors.white,thickness: 2,),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.green,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been booked \nsuccessfully'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      ),
-                       SizedBox(
-                        height: 15,
-                      ),
-                      Divider(color: Colors.white,thickness: 2,),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.white,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been Expired'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      )   ,SizedBox(
-                        height: 15,
-                      ),
-                      Divider(color: Colors.white,thickness: 2,),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.white,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been booked \nsuccessfully'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Divider(color: Colors.white,thickness: 2,),
-                      SizedBox(
-                        height: 15,
-                      ),                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.white,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been booked \nsuccessfully'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Divider(color: Colors.white,thickness: 2,),
-                      SizedBox(
-                        height: 15,
-                      ),                      Row(
-                        children: [
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.notifications_active,
-                                color: Colors.white,
-                                size: 40,
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'your ticket has been Expired'.tr(),
-                            style: TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontSize: 15,
-                              color: const Color(0xffffffff),
-                              fontWeight: FontWeight.w500,
-                              height: 1.5294117647058822,
-                            ),
-                            textHeightBehavior: TextHeightBehavior(
-                                applyHeightToFirstAscent: false),
-                            softWrap: false,
-                          )
-                        ],
-                      )
+                      isPurchased!
+                          ? Row(
+                              children: [
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: Icon(
+                                      Icons.notifications_active,
+                                      color: Colors.green,
+                                      size: 40,
+                                    )),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  'your ticket has been purchased'.tr(),
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 15,
+                                    color: const Color(0xffffffff),
+                                    fontWeight: FontWeight.w500,
+                                    height: 1.5294117647058822,
+                                  ),
+                                  textHeightBehavior: TextHeightBehavior(
+                                      applyHeightToFirstAscent: false),
+                                  softWrap: false,
+                                )
+                              ],
+                            )
+                          : Container(),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Divider(
+                      //   color: Colors.white,
+                      //   thickness: 2,
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Row(
+                      //   children: [
+                      //     IconButton(
+                      //         onPressed: () {},
+                      //         icon: Icon(
+                      //           Icons.notifications_active,
+                      //           color: Colors.white,
+                      //           size: 40,
+                      //         )),
+                      //     SizedBox(
+                      //       width: 10,
+                      //     ),
+                      //     Text(
+                      //       'your ticket has been booked \nsuccessfully'.tr(),
+                      //       style: TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontSize: 15,
+                      //         color: const Color(0xffffffff),
+                      //         fontWeight: FontWeight.w500,
+                      //         height: 1.5294117647058822,
+                      //       ),
+                      //       textHeightBehavior:
+                      //           TextHeightBehavior(applyHeightToFirstAscent: false),
+                      //       softWrap: false,
+                      //     )
+                      //   ],
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Divider(
+                      //   color: Colors.white,
+                      //   thickness: 2,
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Row(
+                      //   children: [
+                      //     IconButton(
+                      //         onPressed: () {},
+                      //         icon: Icon(
+                      //           Icons.notifications_active,
+                      //           color: Colors.white,
+                      //           size: 40,
+                      //         )),
+                      //     SizedBox(
+                      //       width: 10,
+                      //     ),
+                      //     Text(
+                      //       'your ticket has been booked \nsuccessfully'.tr(),
+                      //       style: TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontSize: 15,
+                      //         color: const Color(0xffffffff),
+                      //         fontWeight: FontWeight.w500,
+                      //         height: 1.5294117647058822,
+                      //       ),
+                      //       textHeightBehavior:
+                      //           TextHeightBehavior(applyHeightToFirstAscent: false),
+                      //       softWrap: false,
+                      //     )
+                      //   ],
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Divider(
+                      //   color: Colors.white,
+                      //   thickness: 2,
+                      // ),
+                      // SizedBox(
+                      //   height: 15,
+                      // ),
+                      // Row(
+                      //   children: [
+                      //     IconButton(
+                      //         onPressed: () {},
+                      //         icon: Icon(
+                      //           Icons.notifications_active,
+                      //           color: Colors.white,
+                      //           size: 40,
+                      //         )),
+                      //     SizedBox(
+                      //       width: 10,
+                      //     ),
+                      //     Text(
+                      //       'your ticket has been Expired'.tr(),
+                      //       style: TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontSize: 15,
+                      //         color: const Color(0xffffffff),
+                      //         fontWeight: FontWeight.w500,
+                      //         height: 1.5294117647058822,
+                      //       ),
+                      //       textHeightBehavior:
+                      //           TextHeightBehavior(applyHeightToFirstAscent: false),
+                      //       softWrap: false,
+                      //     )
+                      //   ],
+                      // )
                     ],
                   )
                 ],

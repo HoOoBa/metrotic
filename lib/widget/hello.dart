@@ -8,7 +8,7 @@ class Profile extends StatefulWidget {
   _ProfileState createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile>with SingleTickerProviderStateMixin {
+class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin {
   AnimationController? _controller;
   Animation<double>? _animation;
   bool upDown = true;
@@ -17,7 +17,6 @@ class _ProfileState extends State<Profile>with SingleTickerProviderStateMixin {
   void initState() {
     _controller = new AnimationController(
       duration: const Duration(milliseconds: 180),
-
       vsync: this,
     );
 
@@ -26,15 +25,16 @@ class _ProfileState extends State<Profile>with SingleTickerProviderStateMixin {
       curve: new Interval(0.0, 1.0, curve: Curves.linear),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     final ui.Size logicalSize = MediaQuery.of(context).size;
     final double _width = logicalSize.width;
     final double _height = logicalSize.height;
 
-    void _up(){
-      setState((){
-        if(upDown) {
+    void _up() {
+      setState(() {
+        if (upDown) {
           upDown = false;
           _controller?.forward(from: 0.0);
         } else {
@@ -43,13 +43,14 @@ class _ProfileState extends State<Profile>with SingleTickerProviderStateMixin {
         }
       });
     }
+
     var w = MediaQuery.of(context).size.width;
     var h = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      bottomNavigationBar: BotoomBar(index: 3,),
-      body: SafeArea(
-          child: Container()
-    ));
+        bottomNavigationBar: BotoomBar(
+          index: 3,
+        ),
+        body: SafeArea(child: Container()));
   }
 }

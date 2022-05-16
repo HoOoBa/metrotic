@@ -1,5 +1,3 @@
-
-
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
@@ -14,14 +12,10 @@ class GetImage with ChangeNotifier {
     if (pickedFile != null) {
       print("file picked");
 
-        file = File(pickedFile.path);
-
-
-    }
-    else{
+      file = File(pickedFile.path);
+    } else {
       print("File not picked");
     }
     notifyListeners();
-
   }
 }

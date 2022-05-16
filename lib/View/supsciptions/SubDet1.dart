@@ -30,8 +30,11 @@ class _SupDet1State extends State<SupDet1> {
             SizedBox(
               height: 40,
             ),
-            Expandables( price: " 185 "   , Destination: " One Zone".tr() , TripPrice: " 180 "  , DiscountPercentage: " 40 "  ),
-
+            Expandables(
+                price: " 185 ",
+                Destination: " One Zone".tr(),
+                TripPrice: " 180 ",
+                DiscountPercentage: " 40 "),
             SizedBox(
               height: 20,
             ),
@@ -42,22 +45,29 @@ class _SupDet1State extends State<SupDet1> {
             SizedBox(
               height: 20,
             ),
-            Expandables( price: " 200 "   , Destination: " Two Zones".tr()  , TripPrice: " 200 "  , DiscountPercentage: " 30 "  ),
+            Expandables(
+                price: " 200 ",
+                Destination: " Two Zones".tr(),
+                TripPrice: " 200 ",
+                DiscountPercentage: " 30 "),
             SizedBox(
               height: 20,
             ),
             Divider(
               thickness: 1,
               color: ColorsHelp.background,
-            ),SizedBox(
-              height: 20,
             ),
-            Expandables( price: " 333 "   , Destination: " Three or four Zones".tr() , TripPrice: "333"  , DiscountPercentage: "30"),
-
             SizedBox(
               height: 20,
             ),
-
+            Expandables(
+                price: " 333 ",
+                Destination: " Three or four Zones".tr(),
+                TripPrice: "333",
+                DiscountPercentage: "30"),
+            SizedBox(
+              height: 20,
+            ),
             Divider(
               thickness: 1,
               color: ColorsHelp.background,
@@ -65,7 +75,11 @@ class _SupDet1State extends State<SupDet1> {
             SizedBox(
               height: 20,
             ),
-          Expandables( price: " 400 "   , Destination: "Five or Six Zones".tr() , TripPrice: " 400 "   , DiscountPercentage: " 40 ")
+            Expandables(
+                price: " 400 ",
+                Destination: "Five or Six Zones".tr(),
+                TripPrice: " 400 ",
+                DiscountPercentage: " 40 ")
           ],
         ),
       ),

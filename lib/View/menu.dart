@@ -8,13 +8,13 @@ import 'package:provider/provider.dart';
 import 'package:test/View/supsciptions/Subscription%20Details.dart';
 
 import '../firebase_auth.dart';
+import '../notification_service.dart';
 import '../widget/Map Metro.dart';
 import '../widget/Person.dart';
 import 'About.dart';
 import 'SignIn.dart';
 
 class Menu extends StatelessWidget {
-
   User? user = FirebaseAuth.instance.currentUser;
 
   @override
@@ -144,7 +144,7 @@ class Menu extends StatelessWidget {
                           height: 1.608695652173913,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                       Text(
@@ -156,7 +156,7 @@ class Menu extends StatelessWidget {
                           height: 1.5833333333333333,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     ],
@@ -180,11 +180,12 @@ class Menu extends StatelessWidget {
                           height: 1.608695652173913,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                       Text(
-                        '    Guideline to help you reach your destination.'.tr(),
+                        '    Guideline to help you reach your destination.'
+                            .tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -192,7 +193,7 @@ class Menu extends StatelessWidget {
                           height: 1.5833333333333333,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     ],
@@ -219,7 +220,7 @@ class Menu extends StatelessWidget {
                           height: 1.608695652173913,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                       Text(
@@ -231,7 +232,7 @@ class Menu extends StatelessWidget {
                           height: 1.5833333333333333,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     ],
@@ -241,7 +242,13 @@ class Menu extends StatelessWidget {
                   height: 15,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () async {
+                    await NotificationService.showNotification(
+                        title: 'Booked Successfully',
+                        body: 'we have reserved your ticket',
+                        payload: 'booked',
+                        context: context);
+                  },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -255,11 +262,12 @@ class Menu extends StatelessWidget {
                           height: 1.608695652173913,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                       Text(
-                        '    search for an in/out stations to book a ticket.'.tr(),
+                        '    search for an in/out stations to book a ticket.'
+                            .tr(),
                         style: TextStyle(
                           fontFamily: 'Montserrat',
                           fontSize: 12,
@@ -267,7 +275,7 @@ class Menu extends StatelessWidget {
                           height: 1.5833333333333333,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     ],
@@ -294,7 +302,7 @@ class Menu extends StatelessWidget {
                           height: 1.608695652173913,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                       Text(
@@ -306,7 +314,7 @@ class Menu extends StatelessWidget {
                           height: 1.5833333333333333,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     ],
@@ -316,11 +324,11 @@ class Menu extends StatelessWidget {
                   height: 40,
                 ),
                 GestureDetector(
-                    onTap: ()async {
+                    onTap: () async {
                       await context.read<AuthService>().signOut();
 
-                      Navigator.of(context).pushReplacementNamed(
-                          SignIn.routeName);
+                      Navigator.of(context)
+                          .pushReplacementNamed(SignIn.routeName);
                     },
                     child: Center(
                       child: Text(
@@ -333,7 +341,7 @@ class Menu extends StatelessWidget {
                           height: 1.6206896551724137,
                         ),
                         textHeightBehavior:
-                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
                         softWrap: false,
                       ),
                     )),
